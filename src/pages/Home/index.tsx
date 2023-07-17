@@ -11,7 +11,8 @@ const Home = () => {
   ]
   const navigateToBlog = (postId) => {
     Taro.navigateTo({
-      url: `/pages/blog/blog?id=${postId}`
+      url: `/pages/Blog/index?id=${postId}`,
+      
     });
   };
 
