@@ -1,3 +1,5 @@
+const path = require('path');
+
 const config = {
   projectName: 'my-weapp',
   date: '2023-7-13',
@@ -7,9 +9,12 @@ const config = {
     750: 1,
     828: 1.81 / 2
   },
+  alias: {
+    '@': path.resolve(__dirname, '..', 'src')
+  },
   sourceRoot: 'src',
   outputRoot: 'dist',
-  plugins: [],
+  plugins: ['@tarojs/plugin-html'],
   defineConstants: {
   },
   copy: {
@@ -21,7 +26,7 @@ const config = {
   framework: 'react',
   compiler: 'webpack5',
   cache: {
-    enable: false // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
+    enable: true // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
   },
   mini: {
     postcss: {
@@ -38,7 +43,7 @@ const config = {
         }
       },
       cssModules: {
-        enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
+        enable: true, // 默认为 false，如需使用 css modules 功能，则设为 true
         config: {
           namingPattern: 'module', // 转换模式，取值为 global/module
           generateScopedName: '[name]__[local]___[hash:base64:5]'
@@ -47,6 +52,7 @@ const config = {
     }
   },
   h5: {
+    esnextModules: ['taro-ui'],
     publicPath: '/',
     staticDirectory: 'static',
     postcss: {
