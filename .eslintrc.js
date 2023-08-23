@@ -1,7 +1,54 @@
 module.exports = {
-  "extends": ["taro/react"],
+  env: {
+    browser: true,
+    ecmaVersion: true,
+    node: true,
+  },
+  extends: [
+    "taro/react",
+  'eslint:recommended',
+  'airbnb-base',
+    'eslint:recommended',
+    'plugin:vue/essential',
+    'plugin:prettier/recommended',
+  'plugin:react/recommended',
+  'plugin:@typescript-eslint/recommended',],
   "rules": {
     "react/jsx-uses-react": "on",
     "react/react-in-jsx-scope": "on"
-  }
+  },
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    parser: 'babel-eslint',
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 6,
+    sourceType: 'module',
+  },
+  plugins: ['react', '@typescript-eslint', 'prettier'],
+  rules: {
+    'prettier/prettier': 'error',
+    'generator-star-spacing': 'off',
+    'import/no-named-as-default': 'off',
+    'import/no-named-as-default-member': 'off',
+    'no-console': 0,
+    'prefer-const': 0,
+    'prefer-spread': 0,
+    'no-debugger': 0,
+    'no-async-promise-executor': 0,
+    'no-prototype-builtins': 0,
+    'no-case-declarations': 0,
+    'no-control-regex': 0,
+    'react/react-in-jsx-scope': 0,
+    'react/display-name': 0,
+    '@typescript-eslint/no-this-alias': 0,
+    '@typescript-eslint/no-explicit-any': 0,
+    '@typescript-eslint/no-empty-function': 0,
+    '@typescript-eslint/explicit-module-boundary-types': 0,
+    '@typescript-eslint/ban-types': 0,
+    '@typescript-eslint/no-unused-vars': 0,
+    '@typescript-eslint/no-non-null-assertion': 0,
+    '@typescript-eslint/ban-ts-comment': 0,
+  },
 }
