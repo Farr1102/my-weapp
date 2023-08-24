@@ -4,18 +4,18 @@ import { View, Text } from '@tarojs/components'
 import { AtTabBar } from 'taro-ui'
 
 import './index.less'
-import Home from '@/pages/Home';
+import Home from '../Home';
 import User from '../User';
 import Game from '../Game';
 
-const  Index = () => {
-  const [currentTabBar, setCurrentTabBar] = useState(1);
+const Index = () => {
+  const [currentTabBar, setCurrentTabBar] = useState(0);
   const handleTabBarClick = (v) => {
     setCurrentTabBar(v)
   }
   return (
     <View className='index'>
-      
+
       {currentTabBar === 0 && <Home />}
       {currentTabBar === 1 && <Game />}
       {currentTabBar === 2 && <User />}

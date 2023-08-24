@@ -1,15 +1,15 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/*": ["src/*"]
+      // "@/*": ["src/*"]
     },
     "target": "es2017",
     "module": "commonjs",
-    "removeComments": false,
+    "removeComments": true,
     "preserveConstEnums": true,
     "moduleResolution": "node",
     "experimentalDecorators": true,
-    "noImplicitAny": false,
+    // "noImplicitAny": false,
     "allowSyntheticDefaultImports": true,
     "outDir": "lib",
     "noUnusedLocals": true,
